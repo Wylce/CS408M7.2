@@ -1,24 +1,23 @@
 # Web Dev Starter Code
 
+Wylie Hansen  
+CS 408 - Week 6  
+September 29, 2024  
+
 ## Overview
 
-TODO: Write a project description
+This webpage was a CSS practice exercise where we wrote CSS to style a given HTML file, with focus on position and layout techniques.
+
+## Running
+
+After cloning this repository into a local directory, this webpage can be run on a local server through VS Code's preview functionality. Note that in order to use the Preview functionality, the Live Preview extension must be installed.
 
 ## Sources and Credits
 
-TODO: You must credit the sources and authors of any code, libraries, or other
-assets you use in your project. If you leave this section blank, your project
-will be considered in violation of the Academic Honesty policy unless you truly
-created everything from scratch with no outside help. If you need to use a
-source that you cannot credit (e.g. a classmate's work), you must get explicit
-permission from your instructor.
+- Background Image: https://www.publicdomainpictures.net/en/view-image.php?image=81409&picture=blue-sky
 
-A simple bulleted list below is sufficient. For example:
+- Styling the main content link: https://www.makethingsaccessible.com/guides/creating-a-skip-to-content-link/
 
-- Bootstrap: https://getbootstrap.com/
-- jQuery: https://jquery.com/
-- Background image: https://unsplash.com/photos/...
-- Sound effects: https://freesound.org/people/...
-- Icons: https://fontawesome.com/
-- Fonts: https://fonts.google.com/
-- etc.
+- General CSS Syntax help: https://developer.mozilla.org/en-US/docs/Web/CSS
+
+- Starter Code: https://github.com/shanep/web-dev-starter

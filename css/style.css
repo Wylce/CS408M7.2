@@ -1,4 +1,216 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
-}
+body {
+    background-color: #729bb9; /*Matches the bottom of the image for smoother transition*/
+    background-image: url(../images/blue-sky.jpg);
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  }
+
+  img {
+      max-width: 100%;
+      display: block;
+  }
+  
+  .logo {
+    font-size: 150%;
+    padding: 30px 20px;
+    margin: 0 auto;
+    max-width: 1180px;
+
+
+    color: white;
+  }
+
+  h1 {
+    text-shadow: 5px 3px 5px black;
+  }
+
+  /*--Link to Main Content--*/
+  /*should not be visible unless the user has tabbed onto it*/
+
+  #main-link{
+    font-size: .8em;
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    padding: .5em;
+
+    /*Basic animation to make the link drop down smoothly*/
+    transition-property: top;
+    transition-duration: .6s;
+  }
+
+  #main-link:hover {
+    text-decoration: none;
+  }
+
+  #main-link:not(:focus) {
+    /*Put the link off the screen unless its been tabbed onto with keyboard controls*/
+    top: -5em;
+  }
+
+  /*--Navigation Bar--*/
+  
+  nav {
+    background-color: #000;
+
+    font-size: 1.4em;
+
+    position: sticky;
+    top: 0px;
+  }
+  
+  nav ul {
+    /*
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /*When the window is resized, columns squeeze together as far as they can before going off screen
+    */
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex; /*Flex without flexwrap behaves like the grid above when resized */
+    flex-wrap: wrap;
+
+    max-width: 1280px;
+
+
+    padding: 0;
+    list-style: none;
+    border: solid black;
+  }
+
+  nav ul li {
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+
+    padding-left: 1.4em;  
+    padding-right: 1.4em;
+
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+
+  nav a:hover, nav a:focus{
+    background: blue;
+  }
+
+  nav a:active {
+    background: lightskyblue
+  }
+
+  /*--Main Content--*/
+
+  .grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1180px;
+
+    background-color: rgba(255, 255, 255, .5);
+
+    color: rgb(29, 29, 29);
+
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 1em;
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    border-radius: 12px;
+
+  }
+
+  main > *{
+    background-color: rgba(209, 221, 223, 0.8);
+    padding: 1em;
+    border: 3px solid white;
+    border-radius: 12px;
+  } 
+
+  article {
+    /*width: 70%;*/ /*Proportions are now set by the grid template instead*/
+
+     /*Just comparing sizes here*/
+    margin-left: 1em;
+    margin-left: 10px;
+    
+  }
+
+  article img {
+    float: left;
+    margin-right: 1em;
+  }
+
+  main h2 {
+    color: rgb(3, 94, 136);
+  }
+
+  /*Styling the first letter of the first paragraph*/
+  article p:first-of-type::first-letter {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: rgb(3, 94, 136);
+  }
+
+  aside {
+    margin-right: 1em;
+    margin-right: 10px;
+  }
+
+  .photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+  }
+
+  .feature {
+      width: 200px;
+  }
+
+  /*Attempt at breakpoint formatting, shrink some elements at narrow screen size*/
+  @media screen and (max-width: 40rem){
+
+    .logo h1{
+      font-size: 1.5em;
+    }
+
+    nav {
+      font-size: 1em;
+    }
+
+    .grid {
+      padding: 0px;
+
+      margin-right: 0px;
+      margin-left: 0px;
+
+      gap: 0;
+    }
+
+    main > *{
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    /*
+    .photos{
+      grid-template-columns: 1fr;
+    }
+    */
+    
+  }
